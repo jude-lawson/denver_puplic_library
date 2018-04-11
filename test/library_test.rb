@@ -55,4 +55,35 @@ class LibraryTest < Minitest::Test
 
     assert_equal 3, @dpl.books.length
   end
+
+  def test_collection_does_include_a_book
+    @dpl.add_to_collection(@jane_eyre)
+    @dpl.add_to_collection(@mockingbird)
+    @dpl.add_to_collection(@villette)
+
+    assert @dpl.include?('To Kill a Mockingbird')
+  end
+
+  def test_collection_does_not_include_a_book
+    @dpl.add_to_collection(@jane_eyre)
+    @dpl.add_to_collection(@mockingbird)
+    @dpl.add_to_collection(@villette)
+
+    refute @dpl.include?('A Connecticut Yankee in King Arthur\'s Court')
+  end
+
+  def test_returning_author_last_name_sorted_catalogue
+    @dpl.add_to_collection(@jane_eyre)
+    @dpl.add_to_collection(@mockingbird)
+    @dpl.add_to_collection(@villette)
+    catalogue = @dpl.card_catalogue
+
+    assert_instance_of Book, catalogue[0]
+    assert_instance_of Book, catalogue[1]
+    assert_instance_of Book, catalogue[2]
+
+    assert_equal 'Bronte', catalogue[0].author_last_name
+    assert_equal 'Bronte', catalogue[1].author_last_name
+    assert_equal 'Lee', catalogue[2].author_last_name
+  end
 end
