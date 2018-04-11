@@ -53,7 +53,6 @@ class LibraryTest < Minitest::Test
     assert_equal 'Villette', @dpl.books[2].title
     assert_equal '1853', @dpl.books[2].publication_date
 
+    assert_equal 3, @dpl.books.length
   end
-
-
 end
