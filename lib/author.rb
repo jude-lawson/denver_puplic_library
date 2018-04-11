@@ -1,3 +1,4 @@
+require 'date'
 require './lib/book'
 
 class Author
@@ -11,10 +12,18 @@ class Author
     @books = []
   end
 
+  def format_date(date)
+    if date.split.length > 1
+      Date.parse(date).strftime('%m/%d/%Y')
+    else
+      date
+    end
+  end
+
   def add_book(title, publication_date)
     new_book_attributes = {
       title: title,
-      publication_date: publication_date,
+      publication_date: format_date(publication_date),
       author_first_name: @first_name,
       author_last_name: @last_name }
       new_book = Book.new(new_book_attributes)

@@ -3,6 +3,7 @@
     "coverage": {
       "/Users/jude/turing/1module/morning_exercises/denver_puplic_library/lib/author.rb": [
         1,
+        1,
         null,
         1,
         1,
@@ -10,9 +11,17 @@
         null,
         null,
         1,
-        8,
-        8,
-        8,
+        10,
+        10,
+        10,
+        null,
+        null,
+        1,
+        7,
+        4,
+        null,
+        3,
+        null,
         null,
         null,
         1,
@@ -87,6 +96,6 @@
         null
       ]
     },
-    "timestamp": 1523461180
+    "timestamp": 1523462487
   }
 }
