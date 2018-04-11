@@ -86,4 +86,34 @@ class LibraryTest < Minitest::Test
     assert_equal 'Bronte', catalogue[1].author_last_name
     assert_equal 'Lee', catalogue[2].author_last_name
   end
+
+  def test_finding_by_author
+    @dpl.add_to_collection(@jane_eyre)
+    @dpl.add_to_collection(@mockingbird)
+    @dpl.add_to_collection(@villette)
+    
+    result = @dpl.find_by_author("Charlotte Bronte")
+
+    assert_instance_of Hash, result
+    assert_equal ['Jane Eyre', 'Villette'], result.keys
+    assert_equal 2, result.length
+    assert_instance_of Book, result['Jane Eyre']
+    assert_instance_of Book, result['Villette']
+    assert_equal %w[Bronte Bronte], result.values.map(&:author_last_name)
+  end
+
+  def test_finding_by_publication_date
+    mockingbird = @harper_lee.add_book('To Kill a Mockingbird', '1960')
+    @dpl.add_to_collection(@jane_eyre)
+    @dpl.add_to_collection(mockingbird)
+    @dpl.add_to_collection(@villette)
+
+    result = @dpl.find_by_publication_date("1960")
+
+    assert_instance_of Hash, result
+    assert_equal ['To Kill a Mockingbird'], result.keys
+    assert_equal 1, result.length
+    assert_instance_of Book, result['To Kill a Mockingbird']
+    assert_equal %w[Lee], result.values.map(&:author_last_name)
+  end
 end
