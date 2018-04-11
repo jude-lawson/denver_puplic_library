@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-11T10:30:25-06:00">2018-04-11T10:30:25-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-11T10:32:03-06:00">2018-04-11T10:32:03-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">94.64%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.59
+         4.61
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>112</b> relevant lines. 
-    <span class="green"><b>106</b> lines covered</span> and
-    <span class="red"><b>6</b> lines missed </span>
+    <b>114</b> relevant lines. 
+    <span class="green"><b>114</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -73,11 +73,11 @@
       <tr>
         <td class="strong"><a href="#44de6767290027150bca3b5aa714e58aa2ddf517" class="src_link" title="lib/library.rb">lib/library.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
-        <td>9</td>
-        <td>9</td>
+        <td>20</td>
+        <td>11</td>
+        <td>11</td>
         <td>0</td>
-        <td>3.2</td>
+        <td>3.1</td>
       </tr>
       
       <tr>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#0856f0d776254f577cd7310004cbe79cb0cadd58" class="src_link" title="test/library_test.rb">test/library_test.rb</a></td>
-        <td class="green strong">90.48 %</td>
+        <td class="green strong">100.0 %</td>
         <td>89</td>
         <td>63</td>
-        <td>57</td>
-        <td>6</td>
-        <td>1.5</td>
+        <td>63</td>
+        <td>0</td>
+        <td>1.6</td>
       </tr>
       
     </tbody>
@@ -441,8 +441,8 @@
     <h3>lib/library.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -541,6 +541,30 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def card_catalogue</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="18">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    @books.sort_by { |book| book.author_last_name }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -771,11 +795,11 @@
         <div class="source_table" id="0856f0d776254f577cd7310004cbe79cb0cadd58">
   <div class="header">
     <h3>test/library_test.rb</h3>
-    <h4><span class="green">90.48 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>63</b> relevant lines. 
-      <span class="green"><b>57</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="green"><b>63</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1262,20 +1286,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="81">
-          
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
           
           <code class="ruby">    assert_instance_of Book, catalogue[0]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="82">
-          
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
           
           <code class="ruby">    assert_instance_of Book, catalogue[1]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="83">
-          
+        <li class="covered" data-hits="1" data-linenumber="83">
+          <span class="hits">1</span>
           
           <code class="ruby">    assert_instance_of Book, catalogue[2]</code>
         </li>
@@ -1286,20 +1310,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="85">
-          
+        <li class="covered" data-hits="1" data-linenumber="85">
+          <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &#39;Bronte&#39;, catalogue[0].author_last_name</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="86">
-          
+        <li class="covered" data-hits="1" data-linenumber="86">
+          <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &#39;Bronte&#39;, catalogue[1].author_last_name</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="87">
-          
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &#39;Lee&#39;, catalogue[2].author_last_name</code>
         </li>
